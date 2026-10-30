@@ -1,0 +1,72 @@
+# LicitaBOT — stack prod p/ VPS GRÁTIS (Oracle Always Free).
+# Uso: copie .env.example -> .env, preencha, rode `docker compose -f docker-compose.prod.yml up -d --build`
+name: licitabot
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-licitabot}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-licita}
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER:-postgres}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASS:-licita}
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    # Opcional: a API já tem fallback em memória se REDIS_URL vazio.
+    # Para 100% grátis sem Redis, pode comentar este serviço e deixar REDIS_URL vazio.
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    ports:
+      - "3001:3001"
+    env_file:
+      - .env
+    environment:
+      PORT: 3001
+      NODE_ENV: production
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-licita}@db:5432/${POSTGRES_DB:-licitabot}
+      # Se comentou o redis acima, deixe REDIS_URL vazio (fallback memória)
+      REDIS_URL: redis://:${REDIS_PASS:-licita}@redis:6379
+    volumes:
+      # PERSISTENTE: guarda login storageState por CNPJ. Sem isso vc reloga todo deploy.
+      - api_storage:/app/apps/api/storage
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${PUBLIC_API_URL:-http://localhost:3001}
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      NODE_ENV: production
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  pg_data:
+  redis_data:
+  api_storage:

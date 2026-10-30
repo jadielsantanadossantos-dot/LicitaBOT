@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "LicitaBOT PRO",
+  "version": "1.1",
+  "description": "Sincroniza sessão do portal com o LicitaBOT",
+  "permissions": ["cookies", "storage", "sidePanel", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "side_panel": { "default_path": "popup.html" },
+  "action": {
+    "default_title": "Abrir Painel"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

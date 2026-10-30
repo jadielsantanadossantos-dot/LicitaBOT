@@ -1,0 +1,13 @@
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media(max-width:768px){
+  nav{padding:8px 12px!important;gap:8px!important}
+  nav a{font-size:12px!important;padding:6px 8px!important}
+  main{padding:12px!important;max-width:100%!important}
+  [style*="gridTemplateColumns"]{grid-template-columns:1fr!important}
+  h1{font-size:18px!important}
+  input,select,textarea{font-size:16px!important}
+  table{display:block;overflow-x:auto;white-space:nowrap}
+  pre{white-space:pre-wrap;word-break:break-word}
+}
+@media(max-width:480px){ nav span[style*="opacity: 0.5"]{display:none} }

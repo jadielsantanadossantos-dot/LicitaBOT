@@ -1,0 +1,23 @@
+{
+  "loc": {
+    "ZD-suid": "{\"id\":\"cd3f79fa1e4a4644bc39eaa18146aef8\",\"expiry\":1788963749881,\"tabs\":{\"count\":3,\"expiry\":0}}",
+    "lang": "pt",
+    "lastExternalReferrerTime": "1788962840304",
+    "AdoptConsent": "N4Ig7gpgRgzglgFwgSQCIgFwgGwAYIBmATAMbQC0AzFACw3k0QCsR5UAhjVA+wJyW4mzXABMAHAEYQAGhAA3OPAQB7AE7IRmEBAgioTGr2zkRRdhIZRc7cu0rsI5MYaIiI9u7hoyQygA4IyAB2ACrsAOYwmADaALqy/ggA8gCuCGGRMfEgJMpBMBBBgZpYADK4KWIAogAePhByhekAnn4QWmBiUHAAEgBeEAByPrn5TQBqEKrweZgA7LIpfiLsSCIAgghaRLhExri85AchEjQYuLgYhgB0TGJEAFogAL5AA=",
+    "ampl_rules": "{\"rules\":[{\"inapp_params\":{\"version\":2,\"sample_percentage\":30,\"first_survey\":7,\"dismiss_resurvey_throttle\":3,\"observation_resurvey_limit\":7,\"time_delay\":0,\"position\":\"bottom-right\",\"show_on_all_pages\":false,\"is_any\":true,\"rules\":[{\"field\":\"url\",\"condition\":\"contains\",\"param\":\"\",\"value\":\"operacao.portaldecompraspublicas.com.br\",\"_id\":\"66fbf29762e79118882ed9ea\"}],\"appear_method\":\"immediately\",\"display_not_engaged\":false,\"show_close\":true,\"close_survey_on_url_changed\":false},\"_id\":\"66e583dd17cd1431",
+    "ampl_flag_rules": "{\"value\":\"true\",\"options\":{\"expires\":\"2026-09-09T14:15:48.207Z\"}}",
+    "lastExternalReferrer": "empty",
+    "AdoptVisitorId": "KbAmCMFYBYE4DYC0oBMBDAjI64AMbE0BmNYRADjhVGBON2iA",
+    "li_adsId": "5fc26962-8d22-4bd4-bacd-20fde2e98d1e"
+  },
+  "sess": {
+    "ZD-suid": "{\"id\":\"c26d4ec51d75435e94c856027b5896af\",\"expiry\":1788963739893,\"tabs\":{\"count\":-1,\"expiry\":1788962886461}}",
+    "oaiq_cs:CasoAZtU8nx2aubHqbVaMV": "g",
+    "tt_appInfo": "{\"platform\":\"pc\"}",
+    "ZD-buid": "bfe9e44414cf47468c71364469831cec",
+    "633de0fb0df45700f343ba90.clientId": "bfe9e44414cf47468c71364469831cec",
+    "tt_sessionId": "\"c5a73e08-ac57-11f1-afe7-02001729fffa::WP96bgQnd77QS3v7bcBu\"",
+    "tt_pixel_is_enrich_ipv6_triggered_by_enrich_am": "true",
+    "tt_pixel_session_index": "{\"index\":0,\"main\":0}"
+  }
+}

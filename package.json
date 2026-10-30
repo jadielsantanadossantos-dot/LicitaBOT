@@ -1,0 +1,31 @@
+{
+  "name": "licitabot",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace=apps/api",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "build": "npm run build --workspace=@licitabot/shared && npm run build --workspace=@licitabot/portal && npm run build --workspace=@licitabot/engine && npm run build --workspace=api && npm run build --workspace=web",
+    "build:packages": "npm run build --workspace=@licitabot/shared && npm run build --workspace=@licitabot/portal && npm run build --workspace=@licitabot/engine",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "eslint . --ext .ts,.tsx 2>&1 | head -n 50",
+    "portal:codegen": "playwright codegen https://operacao.portaldecompraspublicas.com.br",
+    "portal:trace": "playwright test --trace on"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.23.1",
+    "eslint": "^9.0.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "concurrently": "^10.0.5",
+    "dotenv": "^17.4.2",
+    "pg": "^8.23.0"
+  }
+}

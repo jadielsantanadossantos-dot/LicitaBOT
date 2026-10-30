@@ -1,0 +1,10 @@
+import dotenv from "dotenv"; dotenv.config();
+import { fetchWithJar } from "../packages/portal/dist/auth.js";
+const cnpj=process.env.PORTAL_CNPJ;
+const BASE_OP="https://operacao.portaldecompraspublicas.com.br";
+const r=await fetchWithJar(cnpj, BASE_OP+"/4/Pregoes/?btBuscar=Buscar", {headers:{Accept:"text/html"}});
+const buf=await r.arrayBuffer(); const ct=r.headers.get("content-type")||"";
+const html=ct.includes("iso-8859")?new TextDecoder("iso-8859-1").decode(buf):new TextDecoder("utf-8").decode(buf);
+const inputs=[...html.matchAll(/<(?:input|select)[^>]*name="([^"]+)"[^>]*>/gi)].map(m=>m[1]);
+console.log([...new Set(inputs)].join("\n"));
+import fs from "fs"; fs.writeFileSync("portal-form.html", html); console.log("saved portal-form.html len", html.length);

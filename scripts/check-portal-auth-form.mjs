@@ -1,0 +1,14 @@
+import dotenv from "dotenv"; dotenv.config();
+import { fetchWithJar, getCookiesHeader, isSessionValid } from "../packages/portal/dist/auth.js";
+const cnpj=process.env.PORTAL_CNPJ;
+console.log("valid", await isSessionValid(cnpj));
+const BASE_OP="https://operacao.portaldecompraspublicas.com.br";
+const r=await fetchWithJar(cnpj, BASE_OP+"/4/Pregoes/?btBuscar=Buscar", {headers:{Accept:"text/html"}});
+const buf=await r.arrayBuffer();
+const ct=r.headers.get("content-type")||"";
+const html = ct.includes("iso-8859") ? new TextDecoder("iso-8859-1").decode(buf) : new TextDecoder("utf-8").decode(buf).includes("�") ? new TextDecoder("iso-8859-1").decode(buf) : new TextDecoder("utf-8").decode(buf);
+import fs from "fs"; fs.writeFileSync("portal-auth-form.html", html); console.log("len", html.length);
+const inputs=[...html.matchAll(/<(?:input|select|textarea)[^>]*name="([^"]+)"[^>]*>/gi)].map(m=>m[1]);
+console.log([...new Set(inputs)].join("\n"));
+console.log("--- snippet searchTable ---");
+console.log(html.slice(html.indexOf("searchTable")-2000, html.indexOf("searchTable")+4000).replace(/\s+/g," ").slice(0,4000));

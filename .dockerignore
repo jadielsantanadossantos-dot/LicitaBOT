@@ -1,0 +1,12 @@
+node_modules/
+.next/
+dist/
+.git/
+storage/
+apps/api/storage/
+apps/api/data/
+data/
+*.log
+*.html
+.env
+trace.zip

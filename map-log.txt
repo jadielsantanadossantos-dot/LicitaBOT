@@ -1,0 +1,47 @@
+REQ POST https://www.google-analytics.com/g/collect?v=2&tid=G-J51QY4D30F&gtm=45je6930v9257993562z8811087501za20gzb811087501zd811087501&_p=1788963862023&gcs=G101&gcd=13p3t3p3p5l1&npa=1&dma_cps=-&dma=0&gdid=dZmNiZj&cid=763146004.1788963864&frm=0&ngs=1&pscdl=denied&rcb=3&sr=1280x800&uaa=x86&uab=64&uafvl=Chromium%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0.0&uaw=0&ul=pt-br&_s=1&tag_exp=115938466~115938469~118897920~118897930~119791748~120213116~120385422~120469145~120469153&sid=1788963863&sct=1&seg=0&dl=https%3A%2F%2Fiam.secure.portaldecompraspublicas.com.br%2Frealms%2FPortal%2Fprotocol%2Fopenid-connect%2Fauth%3Fclient_id%3Daspclient%26redirect_uri%3Dhttps%3A%2F%2Foperacao.portaldecompraspublicas.com.br%2F18%2Floginext%2FoAuth%2F%26response_type%3Dcode%26scope%3Dopenid&dt=Entrar%20em%20Portal&_tu=CA&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=4270
+REQ POST https://analytics.tiktok.com/api/v2/pixel
+REQ POST https://analytics.tiktok.com/api/v2/pixel
+REQ POST https://analytics.tiktok.com/api/v2/pixel/act
+REQ POST https://analytics.tiktok.com/api/v2/pixel
+REQ POST https://analytics.tiktok.com/api/v2/pixel/act
+REQ GET https://portalcpstorage.s3.sa-east-1.amazonaws.com/files/Eventos/preparando-para-vencer.gif
+REQ GET https://portalcpstorage.s3.sa-east-1.amazonaws.com/files/Eventos/Banner_redes+do+Portal.gif
+REQ GET https://portalcpstorage.s3.sa-east-1.amazonaws.com/files/Eventos/O_Portal-te-acompanha.jpg
+REQ GET https://portalcpstorage.s3.sa-east-1.amazonaws.com/files/Banner/CSC+-+Banner+%C3%A1rea+logada+-+Fornecedor.gif
+REQ GET https://portalcpstorage.s3.sa-east-1.amazonaws.com/files/Banner/Banner-%C3%A1rea-logada_Fornecedor.gif
+REQ GET https://api.amplifique.me/cf/survey/rules/66e499ca17cd143147837bbd
+REQ GET https://apipcp.portaldecompraspublicas.com.br/hora?_=1788963866623
+REQ POST https://analytics.tiktok.com/api/v2/pixel
+REQ POST https://analytics.tiktok.com/api/v2/pixel
+REQ POST https://analytics.tiktok.com/api/v2/pixel/act
+RES 200 https://apipcp.portaldecompraspublicas.com.br/hora?_=1788963866623 => 9/9/2026, 11:24:27 AM
+REQ POST https://api.amplifique.me/cf/surveyAnswer/66e583dd17cd14314797a4c2/inApp/v2
+RES 200 https://analytics.tiktok.com/api/v2/pixel => 
+RES 200 https://api.amplifique.me/cf/survey/rules/66e499ca17cd143147837bbd => {"rules":[{"inapp_params":{"version":2,"sample_percentage":30,"first_survey":7,"dismiss_resurvey_throttle":3,"observation_resurvey_limit":7,"time_delay":0,"position":"bottom-right","show_on_all_pages":false,"is_any":true,"rules":[{"field":"url","condition":"contains","param":"","value":"operacao.portaldecompraspublicas.com.br","_id":"66fbf29762e79118882ed9ea"}],"appear_method":"immediately","display_not_engaged":false,"show_close":true,"close_survey_on_url_changed":false},"_id":"66e583dd17cd14314797a4c2","title":"CES e CSAT - Produto"},{"inapp_params":{"version":2,"sample_percentage":30,"first_survey":1,"dismiss_resurvey_throttle":30,"observation_resurvey_limit":3,"time_delay":90,"position":"bottom-right","show_on_all_pages":false,"is_any":true,"rules":[{"field":"url","condition":"contains","param":"","value":"operacao.portaldecompraspublicas.com.br","_id":"66fbf4518aebf4012b0c3b02"}],"appear_method":"immediately","display_not_engaged":false,"show_close":true,"close_survey_on_url_changed":false},"_id":"66e5814b17cd143147970729","title":"Produto"}],"preIdentify":false}
+RES 200 https://analytics.tiktok.com/api/v2/pixel => 
+REQ POST https://disclaimer-api.goadopt.io/api/tag/get-consent
+REQ POST https://analytics.tiktok.com/api/v2/monitor
+RES 200 https://analytics.tiktok.com/api/v2/pixel/act => 
+RES 200 https://api.amplifique.me/cf/surveyAnswer/66e583dd17cd14314797a4c2/inApp/v2 => {"message":"OK","eligible":true,"complementSurvey":false,"survey":{"thankyou_page":{"enabled":true,"variations":[{"condition":null,"message":"Obrigado por responder nossa pesquisa! Sua opinião é muito importante para nós.","imageSize":"M","_id":"66e583dd17cd14314797a4c3"}],"skip":false,"url_to_skip":"","maxScoreAnimation":true},"inapp_params":{"version":2,"sample_percentage":30,"first_survey":7,"dismiss_resurvey_throttle":3,"observation_resurvey_limit":7,"time_delay":0,"position":"bottom-right","show_on_all_pages":false,"is_any":true,"rules":[{"field":"url","condition":"contains","param":"","value":"operacao.portaldecompraspublicas.com.br","_id":"66fbf29762e79118882ed9ea"}],"appear_method":"immediately","display_not_engaged":false,"show_close":true,"close_survey_on_url_changed":false},"link_params":{"page_title":"","page_description":"","customer_form_fields":[],"customer_custom_fields":[],"require_fullname":false,"kiosk_timeout":60,"links":[{"name":"Link1","created_at":"2024-09-14T12:38:53.418Z","isQrCode":false,"isKiosk":false,"views":0,"starts":0,"_id":"66e583dd17cd14314797a4c4","active":true},{"name":"QRCode1","created_at":"2024-09-14T12:38:53.418Z","isQrCode":true,"isKiosk":fa
+RES 200 https://analytics.tiktok.com/api/v2/monitor => 
+RES 200 https://disclaimer-api.goadopt.io/api/tag/get-consent => {"message":"","success":true,"data":{"visitorId":"e11cebd1-6047-42ed-b07e-99ee984f89c8","optInTags":[],"optOutTags":[],"third_cookie":true,"tcString":null,"consentId":"3PAMeA","eventType":"w8biHzeN"}}
+REQ POST https://analytics.tiktok.com/api/v2/pixel
+RES 200 https://analytics.tiktok.com/api/v2/pixel => 
+REQ POST https://www.google-analytics.com/g/collect?v=2&tid=G-J51QY4D30F&gtm=45je6930v9257993562z8811087501za20gzb811087501zd811087501&_p=1788963865873&gcs=G101&gcd=13p3t3p3p5l1&npa=1&dma_cps=-&dma=0&gdid=dZmNiZj&_eu=AAAAAAQ&cid=763146004.1788963864&frm=0&ngs=1&pscdl=denied&rcb=13&sr=1280x800&uaa=x86&uab=64&uafvl=Chromium%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0.0&uaw=0&ul=pt-br&_s=1&tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153&sid=1788963863&sct=1&seg=1&dl=https%3A%2F%2Foperacao.portaldecompraspublicas.com.br%2F4%2FDashBoard%2F&dr=https%3A%2F%2Foperacao.portaldecompraspublicas.com.br%2F18%2Floginext%2FoAuth%2F%3Fsession_state%3D021d4cf9-f002-484d-91cb-f9a934836c74%26iss%3Dhttps%253A%252F%252Fiam.secure.portaldecompraspublicas.com.br%252Frealms%252FPortal%26code%3D9f3285e6-6d28-4174-b08a-17f78b7f7bf8.021d4cf9-f002-484d-91cb-f9a934836c74.278364ca-2713-4f9b-af84-f1b85c78fe78&dt=Portal%20de%20Compras%20P%C3%BAblicas%20%7C%20Painel%20de%20Opera%C3%A7%C3%B5es&_tu=CA&en=page_view&tfd=6558
+REQ GET https://portalcpstorage.s3.sa-east-1.amazonaws.com/files/Eventos/preparando-para-vencer.gif
+REQ GET https://portalcpstorage.s3.sa-east-1.amazonaws.com/files/Eventos/Banner_redes+do+Portal.gif
+REQ GET https://portalcpstorage.s3.sa-east-1.amazonaws.com/files/Eventos/O_Portal-te-acompanha.jpg
+REQ GET https://portalcpstorage.s3.sa-east-1.amazonaws.com/files/Banner/CSC+-+Banner+%C3%A1rea+logada+-+Fornecedor.gif
+REQ GET https://portalcpstorage.s3.sa-east-1.amazonaws.com/files/Banner/Banner-%C3%A1rea-logada_Fornecedor.gif
+REQ POST https://api.amplifique.me/cf/surveyAnswer/66e583dd17cd14314797a4c2/inApp/v2
+REQ GET https://apipcp.portaldecompraspublicas.com.br/hora?_=1788963876923
+RES 200 https://apipcp.portaldecompraspublicas.com.br/hora?_=1788963876923 => 9/9/2026, 11:24:37 AM
+RES 200 https://api.amplifique.me/cf/surveyAnswer/66e583dd17cd14314797a4c2/inApp/v2 => {"message":"OK","eligible":true,"complementSurvey":false,"survey":{"thankyou_page":{"enabled":true,"variations":[{"condition":null,"message":"Obrigado por responder nossa pesquisa! Sua opinião é muito importante para nós.","imageSize":"M","_id":"66e583dd17cd14314797a4c3"}],"skip":false,"url_to_skip":"","maxScoreAnimation":true},"inapp_params":{"version":2,"sample_percentage":30,"first_survey":7,"dismiss_resurvey_throttle":3,"observation_resurvey_limit":7,"time_delay":0,"position":"bottom-right","show_on_all_pages":false,"is_any":true,"rules":[{"field":"url","condition":"contains","param":"","value":"operacao.portaldecompraspublicas.com.br","_id":"66fbf29762e79118882ed9ea"}],"appear_method":"immediately","display_not_engaged":false,"show_close":true,"close_survey_on_url_changed":false},"link_params":{"page_title":"","page_description":"","customer_form_fields":[],"customer_custom_fields":[],"require_fullname":false,"kiosk_timeout":60,"links":[{"name":"Link1","created_at":"2024-09-14T12:38:53.418Z","isQrCode":false,"isKiosk":false,"views":0,"starts":0,"_id":"66e583dd17cd14314797a4c4","active":true},{"name":"QRCode1","created_at":"2024-09-14T12:38:53.418Z","isQrCode":true,"isKiosk":fa
+REQ POST https://analytics.tiktok.com/api/v2/pixel
+REQ POST https://analytics.tiktok.com/api/v2/pixel/act
+RES 200 https://analytics.tiktok.com/api/v2/pixel => 
+REQ POST https://analytics.tiktok.com/api/v2/monitor
+RES 200 https://analytics.tiktok.com/api/v2/pixel/act => 
+RES 200 https://analytics.tiktok.com/api/v2/monitor => 
+REQ POST https://analytics.tiktok.com/api/v2/pixel
+RES 200 https://analytics.tiktok.com/api/v2/pixel => 

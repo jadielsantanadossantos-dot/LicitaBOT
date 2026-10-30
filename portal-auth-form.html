@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html class="login-pf" lang="pt-BR" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="noindex, nofollow">
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-P5TKC2G');
+    </script>
+            <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Entrar em Portal</title>
+    <link rel="icon" href="/resources/qqhhs/login/portal-theme 4.2/img/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+            <link href="/resources/qqhhs/common/keycloak/vendor/patternfly-v5/patternfly.min.css" rel="stylesheet" />
+            <link href="/resources/qqhhs/common/keycloak/vendor/patternfly-v5/patternfly-addons.css" rel="stylesheet" />
+            <link href="/resources/qqhhs/login/portal-theme 4.2/css/styles.css" rel="stylesheet" />
+    <script type="importmap">
+        {
+            "imports": {
+                "rfc4648": "/resources/qqhhs/common/keycloak/vendor/rfc4648/rfc4648.js"
+            }
+        }
+    </script>
+    <script type="module" src="/resources/qqhhs/login/portal-theme 4.2/js/passwordVisibility.js"></script>
+    <script type="module">
+        import { startSessionPolling } from "/resources/qqhhs/login/portal-theme 4.2/js/authChecker.js";
+
+        startSessionPolling(
+            "/realms/Portal/login-actions/restart?client_id=aspclient&tab_id=MlyPaCVdBXo&client_data=eyJydSI6Imh0dHBzOi8vb3BlcmFjYW8ucG9ydGFsZGVjb21wcmFzcHVibGljYXMuY29tLmJyLzE4L2xvZ2luZXh0L29BdXRoLyIsInJ0IjoiY29kZSJ9&skip_logout=true"
+        );
+
+        const DARK_MODE_CLASS = "pf-v5-theme-dark";
+        const mediaQuery =window.matchMedia("(prefers-color-scheme: dark)");
+        updateDarkMode(false);
+        mediaQuery.addEventListener("change", (event) =>
+          updateDarkMode(event.matches),
+        );
+        function updateDarkMode(isEnabled) {
+          const { classList } = document.documentElement;
+          if (isEnabled) {
+            classList.add(DARK_MODE_CLASS);
+          } else {
+            classList.remove(DARK_MODE_CLASS);
+          }
+        }
+    </script>
+</head>
+
+<body>
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5TKC2G"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<header>
+    <div class="header-container">
+        <div>
+            <img src="/resources/qqhhs/login/portal-theme 4.2/img/PhoneCall.png">
+            <p>CENTRAL DE ATENDIMENTO: 3003-5455 |</p>
+        </div>
+        <div>
+            <p>0800 730 5455</p>
+            <img src="/resources/qqhhs/login/portal-theme 4.2/img/Info.png">
+            <p>DEMAIS REGIÕES</p>
+        </div>
+    </div>
+</header>
+  <div class="page-container">
+
+  <div class="left-panel" style="background-image: url('/resources/qqhhs/login/portal-theme 4.2/img/bg-photo.png');">
+        <img src="/resources/qqhhs/login/portal-theme 4.2/img/Layer 1 1.png" alt="Mulher usando celular" class="hero-image">
+  </div>
+
+
+<div class="right-panel " style="">
+
+
+    <div class="login-form-wrapper">
+          <div class="pf-v5-c-login__main-header">
+          </div>
+
+          <div class="pf-v5-c-login__main-body">
+
+
+              <div class="login-logo-container">
+                <img src="https://portaldecompraspublicas.com.br/img/icones/ico-logo-portal.svg" alt="Logo Portal de Compras Públicas" class="login-logo-img"/>
+              </div>            
+
+        <div id="kc-form" class="main-content">
+            <div id="kc-form-wrapper">
+                <h3 class="titulo-da-pagina">Acesso à conta</h3>
+                <form id="kc-form-login" class="pf-v5-c-form" action="https://iam.secure.portaldecompraspublicas.com.br/realms/Portal/login-actions/authenticate?session_code=jzgykLUEBEwaE5U0ebwocN_uO6T8LI5xttFAAi0gvTM&amp;execution=aada3918-b42b-4032-b639-b46da1c18168&amp;client_id=aspclient&amp;tab_id=MlyPaCVdBXo&amp;client_data=eyJydSI6Imh0dHBzOi8vb3BlcmFjYW8ucG9ydGFsZGVjb21wcmFzcHVibGljYXMuY29tLmJyLzE4L2xvZ2luZXh0L29BdXRoLyIsInJ0IjoiY29kZSJ9" method="post" novalidate="novalidate">
+                    
+                    <div id="form-error-empty" class="pf-v5-c-form__group hidden">
+                        <div class="alert pf-m-danger error-message" id="kc-form-error-generic">
+                            <span  class="kc-feedback-text text-error-message">Por favor, preencha usuário e senha.</span>
+                        </div>
+                    </div>
+
+
+
+<div class="pf-v5-c-form__group">
+  <div class="pf-v5-c-form__label">
+    <label for="username" class="pf-v5-c-form__label">
+        <span class="pf-v5-c-form__label-text titulo-label">
+                                      Login
+
+        </span>
+    </label>
+  </div>
+
+    <span>
+      <input class="input-username" id="username" name="username" value="" type="text" autocomplete="username"
+          placeholder="Digite seu login"
+          maxlength="150"
+          autofocus
+          aria-invalid="" />
+
+    </span>
+
+  <div id="input-error-client-username"></div>
+
+</div>
+
+
+
+<div class="pf-v5-c-form__group">
+  <div class="pf-v5-c-form__label">
+    <label for="password" class="pf-v5-c-form__label">
+        <span class="pf-v5-c-form__label-text titulo-label">
+          Senha
+        </span>
+    </label>
+  </div>
+
+    <div class="pf-v5-c-input-group input-senha-div">
+      <div class="pf-v5-c-input-group__item pf-m-fill input-senha-div-filha">
+        <span class="input-senha-span ">
+        <input class="input-senha-input" id="password" name="password" value="" type="password" autocomplete="current-password"
+          placeholder="Digite sua senha"
+          maxlength="50"
+          
+          aria-invalid=""/>
+        </span>
+      </div>
+    <div class="pf-v5-c-input-group__item input-senha-div-img">
+      <button class="pf-v5-c-button pf-m-control input-senha-button" type="button" aria-label="Exibir senha"
+              aria-controls="password" data-password-toggle
+              data-label-show="Exibir senha" data-label-hide="Ocultar senha">
+        <img src="/resources/qqhhs/login/portal-theme 4.2/img/visualizar-senha.png" alt="Mostrar senha" class="input-senha-img" />
+      </button>
+    </div>
+    </div>
+        <div class="pf-v5-c-form__helper-text" aria-live="polite">
+            <div class="pf-v5-c-helper-text">
+                <div class="pf-v5-c-helper-text__item">
+                    <span class="pf-v5-c-helper-text__item-text esqueci-minha-senha">
+                        <a href="/realms/Portal/login-actions/reset-credentials?client_id=aspclient&amp;tab_id=MlyPaCVdBXo&amp;client_data=eyJydSI6Imh0dHBzOi8vb3BlcmFjYW8ucG9ydGFsZGVjb21wcmFzcHVibGljYXMuY29tLmJyLzE4L2xvZ2luZXh0L29BdXRoLyIsInJ0IjoiY29kZSJ9">Esqueceu a senha?</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+  <div id="input-error-client-password"></div>
+
+</div>
+
+
+                    <div class="pf-v5-c-form__group">
+                    </div>
+
+                    <input type="hidden" id="id-hidden-input" name="credentialId" />
+  <div class="pf-v5-c-form__group">
+    <div class="botao-container">
+  <button class="botao-login botao-login " name="login" id="kc-login" type="submit">Entrar</button>
+    </div>
+  </div>
+                </form>
+
+        <script>
+            document.getElementById("kc-form-login").addEventListener("submit", function(event) {
+                const username = document.querySelector("input[name='username']");
+                const password = document.querySelector("input[name='password']");
+                const errorGeneric = document.getElementById("form-error-message");
+                const errorEmpty = document.getElementById("form-error-empty");
+                
+                if (!username.value.trim() || !password.value.trim()) {
+                    event.preventDefault();
+                    
+                    if(errorGeneric){
+                        errorGeneric.classList.add('hidden');  
+                    }
+
+                    errorEmpty.classList.remove('hidden');
+                } else {
+                    errorEmpty.classList.add('hidden');
+                }
+            });
+        </script>
+
+            </div>
+        </div>
+        <p style="text-align: center; color: #7D7D7D;margin-top: 16px;">
+        Ainda não se cadastrou? 
+        <a href="https://www.portaldecompraspublicas.com.br/adesao/fornecedor" target="_blank" style="font-weight: 600; color: #0085AC;">
+            Cadastre-se
+        </a>
+        </p>
+
+
+
+
+            
+
+
+
+          </div>
+          <div class="pf-v5-c-login__main-footer">
+
+
+          </div>
+        </div>
+          <div class="redes-sociais">
+            <div class="central-de-atendimento">
+              Central de Atendimento:
+                <span style="font-weight:600; color: #0085AC">3003-5455</span>
+                <span style="color:#717171"> | </span>
+                <span style="font-weight:600; color: #0085AC">0800 730 5455</span>
+            </div>
+          </div>
+    </div>
+  </div>
+<footer>
+        <div class="footer-top">
+            <div class="content">
+                <div class="header-footer">
+                    <img src="/resources/qqhhs/login/portal-theme 4.2/img/Logos.png">
+                    <div class="footer-rede-social">
+                        <a href="https://www.instagram.com/oportaldecompraspublicas" target="_blank"><img src="/resources/qqhhs/login/portal-theme 4.2/img/instagram.png" alt="Instagram"></a>
+                        <a href="https://www.facebook.com/portaldecompraspublicas" target="_blank"><img src="/resources/qqhhs/login/portal-theme 4.2/img/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.youtube.com/c/portaldecompraspublicas" target="_blank"><img src="/resources/qqhhs/login/portal-theme 4.2/img/youtube.png" alt="YouTube"></a>
+                        <a href="https://www.tiktok.com/@oportaldecompraspublicas" target="_blank"><img src="/resources/qqhhs/login/portal-theme 4.2/img/tiktok.png" alt="TikTok"></a>
+                        <a href="https://www.linkedin.com/company/portaldecompraspublicas" target="_blank"><img src="/resources/qqhhs/login/portal-theme 4.2/img/linkedin.png" alt="LinkedIn"></a>
+                        <a href="https://api.whatsapp.com/send/?phone=556130035455&text&type=phone_number&app_absent=0" target="_blank"><img src="/resources/qqhhs/login/portal-theme 4.2/img/whatsapp.png" alt="WhatsApp"></a>
+                    </div>
+                </div>
+
+                <div class="parceiros">
+                    <h3>Parceiros</h3>
+                    <div class="logo-parceiros">
+                        <img src="/resources/qqhhs/login/portal-theme 4.2/img/intituto_protege.png" alt="Instituto Protege">
+                        <img src="/resources/qqhhs/login/portal-theme 4.2/img/agm.png" alt="AGM">
+                        <img src="/resources/qqhhs/login/portal-theme 4.2/img/effecti.png" alt="Effecti">
+                        <img src="/resources/qqhhs/login/portal-theme 4.2/img/forseti.png" alt="Forseti">
+                        <img src="/resources/qqhhs/login/portal-theme 4.2/img/conlicitacao.png" alt="ConLicitação">
+                    </div>
+                </div>
+
+                <div class="container-central-de-atendimento">
+                    <div class="central-de-atendimento-footer">
+                        <h3>Central de Atendimento</h3>
+                        <p>Capitais, Regiões Metropolitanas e WhatsApp: <span>3003-5455</span></p>
+                        <p>Demais Regiões: <span>0800 730 5455</span></p>
+                        <p>Região Sul: <span>(48) 3771-4672 | (51) 3103-9615</span></p>
+                        <p>Brasília: <span>(61) 3120-3700 | (61) 3142-4887</span></p>
+                        <p>de segunda a sexta, das 8h às 18h (horário de Brasília), exceto feriados</p>
+                    </div>
+
+                    <div class="atendimento-email">
+                        <div class="atendimento">
+                            <img src="/resources/qqhhs/login/portal-theme 4.2/img/icone_portal.png" alt="Portal de Compras Públicas">
+                            <div class="info-atendimento">
+                                <p class="titulo">Quer vender para o governo?</p>
+                                <p class="email">fornecedor@portaldecompraspublicas.com.br </p>
+                            </div>
+                        </div>
+
+                        <div class="atendimento">
+                            <img src="/resources/qqhhs/login/portal-theme 4.2/img/icone_portal.png" alt="Portal de Compras Públicas">
+                            <div class="info-atendimento">
+                                <p class="titulo">É ente público? </p>
+                                <p class="email">comprador@portaldecompraspublicas.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bootom">
+            <div class="content">
+                <div class="section-footer">
+                    <div class="footer-column">
+                        <h4>Processos</h4>
+                        <a href="https://www.portaldecompraspublicas.com.br/processos" target="_blank">Encontre</a>
+
+                        <h4>Cadastre-se</h4>
+                        <a href="https://www.portaldecompraspublicas.com.br/adesao/fornecedor" target="_blank">Fornecedor</a>
+                        <a href="https://www.portaldecompraspublicas.com.br/adesao/comprador" target="_blank">Comprador</a>
+                        <a href="https://www.portaldecompraspublicas.com.br/adesao/consultor" target="_blank">Consultor</a>
+                        <a href="https://www.portaldecompraspublicas.com.br/adesao/internacional" target="_blank">Internacional</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Aprenda</h4>
+                        <a href="https://www.portaldecompraspublicas.com.br/aprenda" target="_blank">Eventos/EAD</a>
+                        <h4>Novidades</h4>
+                        <a href="https://www.portaldecompraspublicas.com.br/novidades" target="_blank">Notícias e Parcerias</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Documentos</h4>
+                        <a href="https://bibliotecapcp.zendesk.com/hc/pt-br" target="_blank">Encontre</a>
+
+                        <h4>Blog</h4>
+                        <a href="https://www.portaldecompraspublicas.com.br/blog" target="_blank">Encontre</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Sobre</h4>
+                        <a href="https://www.portaldecompraspublicas.com.br/sobre/o-portal" target="_blank">O Portal</a>
+                        <a href="https://www.portaldecompraspublicas.com.br/sobre/por-que-cobramos" target="_blank">Por que cobramos?</a>
+                        <a href="https://www.portaldecompraspublicas.com.br/sobre/legislacao" target="_blank">Legislação</a>
+                        <a href="https://www.portaldecompraspublicas.com.br/sobre/parceiros" target="_blank">Parceiros</a>
+                        <a href="https://www.portaldecompraspublicas.com.br/consultores" target="_blank">Depoimentos</a>
+                        <a href="https://www.portaldecompraspublicas.com.br/sobre/aviso-privacidade" target="_blank">Política de Privacidade</a>
+                        <a href="https://www.portaldecompraspublicas.com.br/sobre/politica-cookies" target="_blank">Política de Cookies</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Contato</h4>
+                        <a href="https://www.portaldecompraspublicas.com.br/faleconosco" target="_blank">Atendimento</a>
+                        <a href="https://vagas.portaldecompraspublicas.com.br/jobs" target="_blank">Trabalhe Conosco</a>
+                    </div>
+                </div>
+
+                <div class="selos">
+                    <div class="iso">
+                        <div class="atc">
+                            <img src="/resources/qqhhs/login/portal-theme 4.2/img/atc.png">
+                            <p>O Portal de Compras Públicas é associado à ATCG (Associação de Tecnologia e Compras
+                                Governamentais), reforçando seu compromisso com a transparência, inovação e boas
+                                práticas no setor público. Atuamos em conformidade com a legislação vigente, com
+                                processos e soluções alinhados às exigências legais e regulatórias. Link de Acesso:
+                                Documentos - Associação das Empresas de Tecnologia para Contratações Governamentais</p>
+                        </div>
+                        <div class="selos-iso">
+                            <img src="/resources/qqhhs/login/portal-theme 4.2/img/ISO-27001-2.png" alt="ISO 27001">
+                            <img src="/resources/qqhhs/login/portal-theme 4.2/img/ISO-20000-1-2.png" alt="ISO 20000-1">
+                            <img src="/resources/qqhhs/login/portal-theme 4.2/img/ISO-9001-2.png" alt="ISO 9001">
+                            <img src="/resources/qqhhs/login/portal-theme 4.2/img/ISO-IEC-27701-2.png" alt="ISO/IEC 27701">
+                        </div>
+                    </div>
+
+                    <div class="selos-img">
+                        <img src="/resources/qqhhs/login/portal-theme 4.2/img/bndes.png" alt="BNDES" class="selo-bndes">
+                        <img src="/resources/qqhhs/login/portal-theme 4.2/img/govtech.png" alt="GovTech" class="selo-govtech">
+                        <img src="/resources/qqhhs/login/portal-theme 4.2/img/selo-startout.png" alt="Selo StartOut" class="selo-startout">
+                        <img src="/resources/qqhhs/login/portal-theme 4.2/img/selo-gptw.png" alt="Selo GPTW" class="selo-gptw">
+                        <img src="/resources/qqhhs/login/portal-theme 4.2/img/abes.png" alt="ABES"class="selo-abes">
+                    </div>
+                </div>
+                <div class="infos-site-footer">
+                    <p>SIA Trecho 17, Rua 20, Lote 90 – 2º andar, Brasília/DF – CEP 71.200-256</p>
+                    <p>©2024 Portal de Compras Públicas – Todos os direitos reservados</p>
+                    <p>CNPJ: 09.397.355/0001-30 – Ecustomize Consultoria em Software S/A</p>
+                </div>
+            </div>
+        </div>
+    </footer></body>
+
+<script>
+  window.resourcePath = "/resources/qqhhs/login/portal-theme 4.2";
+</script>
+<script src="/resources/qqhhs/login/portal-theme 4.2/js/eye-password.js"></script>
+</html>
